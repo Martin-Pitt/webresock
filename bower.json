@@ -1,0 +1,25 @@
+{
+  "name": "webresock",
+  "description": "Yet another reconnecting WebSocket using reconnect-core",
+  "main": "webresock.js",
+  "moduleType": "globals",
+  "authors": [
+    "Gautaz"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "reconnect",
+    "websocket",
+    "backoff"
+  ],
+  "homepage": "https://github.com/gautaz/webresock",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/gautaz/webresock.git"
+  },
+  "ignore": [
+    "package.json",
+    "src",
+    "test"
+  ]
+}

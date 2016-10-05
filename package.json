@@ -1,0 +1,39 @@
+{
+  "name": "webresock",
+  "version": "0.0.0",
+  "description": "Yet another reconnecting WebSocket using reconnect-core",
+  "main": "webresock.js",
+  "scripts": {
+    "check": "standard src test",
+    "make": "browserify --outfile webresock.js --require ./src/webresock --standalone webresock",
+    "test": "npm run check && npm run make && node test",
+    "bower": "bower"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gautaz/webresock.git"
+  },
+  "keywords": [
+    "reconnect",
+    "websocket",
+    "backoff"
+  ],
+  "author": "Gautaz",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gautaz/webresock/issues"
+  },
+  "homepage": "https://github.com/gautaz/webresock#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "body-parser": "^1.15.2",
+    "bower": "^1.7.9",
+    "browserify": "^13.1.0",
+    "express": "^4.14.0",
+    "reconnect-core": "^1.3.0",
+    "selenium-standalone": "^5.7.2",
+    "standard": "^8.3.0",
+    "tape": "^4.6.2",
+    "webdriverio": "^4.2.16"
+  }
+}
