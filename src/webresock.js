@@ -4,8 +4,8 @@ const adaptEventName = (eventName) => eventName === 'connect' ? 'open' : eventNa
 const adapt = (f, connection) => (eventName, ...args) => (f(adaptEventName(eventName), ...args) || true) && connection
 
 module.exports = {
-  reconnect: require('reconnect-core')((...args) => {
-    const ws = new WebSocket(...args)
+  reconnect: require('reconnect-core')((url, protocols) => {
+    const ws = new WebSocket(url, protocols)
     const wsOnce = (eventName, listener) => ws.addEventListener(eventName, function onceListener (...args) {
       ws.removeEventListener(eventName, onceListener)
       listener(...args)
